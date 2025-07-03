@@ -47,10 +47,10 @@
   background: #0a0a0a;
   background-image: 
     /* Vertical grid lines */
-    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px),
     /* Horizontal grid lines */
-    linear-gradient(180deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 20px 20px;
+    linear-gradient(180deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 120px 120px;
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
@@ -104,10 +104,10 @@
 }
 
 .menu-logo {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 1px;
-  color: white;
+  color: #666;
 }
 
 .menu-close {

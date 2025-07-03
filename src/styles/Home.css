@@ -5,10 +5,10 @@
   background: #0a0a0a;
   background-image: 
     /* Vertical grid lines */
-    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px),
     /* Horizontal grid lines */
-    linear-gradient(180deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 20px 20px;
+    linear-gradient(180deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 120px 120px;
   color: white;
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -32,9 +32,10 @@
 }
 
 .logo {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   letter-spacing: 1px;
+  color: #666;
   opacity: 0;
   animation: slideInFromLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
 }
@@ -51,8 +52,8 @@
 }
 
 .menu-dots span {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   background: white;
   border-radius: 50%;
   display: block;
@@ -62,9 +63,9 @@
   background: transparent;
   border: 2px solid white;
   color: white;
-  padding: 8px 20px;
+  padding: 10px 24px;
   border-radius: 20px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
   cursor: pointer;
@@ -98,7 +99,7 @@
 }
 
 .hero-title {
-  font-size: clamp(120px, 15vw, 200px);
+  font-size: clamp(140px, 16vw, 220px);
   font-weight: 900;
   letter-spacing: -5px;
   margin: 0;
@@ -146,8 +147,8 @@
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
@@ -164,7 +165,7 @@
 }
 
 .label {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -287,7 +288,7 @@
   }
   
   .hero-title {
-    font-size: clamp(80px, 20vw, 120px);
+    font-size: clamp(90px, 22vw, 140px);
   }
 }
 
@@ -301,11 +302,11 @@
   }
   
   .contact-btn {
-    padding: 6px 15px;
-    font-size: 10px;
+    padding: 8px 18px;
+    font-size: 12px;
   }
   
   .logo {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
