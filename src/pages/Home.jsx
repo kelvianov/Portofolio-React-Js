@@ -40,6 +40,11 @@ const Home = () => {
               <span className="label">CERTIFICATES</span>
             </div>
           </div>
+
+          {/* Hero Image */}
+          <div className="hero-image">
+            <img src="/images/home1.jpeg" alt="Home Portrait" />
+          </div>
         </div>
       </section>
     </div>
