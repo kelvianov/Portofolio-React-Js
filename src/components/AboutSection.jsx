@@ -36,22 +36,26 @@ const AboutSection = () => {
         <span className="section-title">//APPROACH</span>
         <span className="section-subtitle">THREE PHASES</span>
       </div>
-      
+
       <div className="about-content">
         <h2 ref={titleRef} className={`about-title ${titleVisible ? 'animate' : ''}`}>
-          <span className="word">I'M</span>
-          <span className="word">KELVIANOV</span>
-          <span className="word">BASED</span>
-          <span className="word">IN</span>
-          <span className="word">BANDUNG,</span>
-          <span className="word">INDONESIA.</span>
+          <div className="title-line">
+            <span className="word">I'M</span>
+            <span className="word">KELVIANOV</span>
+            <span className="word">BASED</span>
+            <span className="word">IN</span>
+          </div>
+          <div className="title-line">
+            <span className="word">BANDUNG,</span>
+            <span className="word">INDONESIA.</span>
+          </div>
         </h2>
-        
+
         <p className="about-description">
-          I employed responsive designskills to maintain<br />
+          I employed responsive design skills to maintain<br />
           consistency across all devices.
         </p>
-        
+
         <div className="process-indicators">
           <div className="indicator active">01</div>
           <div className="indicator">02</div>

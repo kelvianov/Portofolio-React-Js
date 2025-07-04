@@ -38,7 +38,7 @@
 
 .about-title {
   font-size: clamp(60px, 6vw, 100px);
-  font-weight: 900;
+  font-weight: 700;
   color: white;
   margin-bottom: 40px;
   line-height: 1.1;
@@ -47,6 +47,21 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.about-title .title-line {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.about-title .title-line .word {
+  margin-right: 20px;
+}
+.about-title .title-line .word:last-child {
+  margin-right: 0;
 }
 
 .about-title .word {
