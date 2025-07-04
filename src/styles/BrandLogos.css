@@ -1,0 +1,56 @@
+.brand-logos-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 60px auto 0 auto;
+  padding-bottom: 40px;
+  /* background removed */
+}
+
+.brand-card {
+  background: #111;
+  border-radius: 18px;
+  width: 300px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 16px 0 #0002;
+  position: relative;
+  transition: transform 0.2s;
+}
+.brand-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 32px 0 #0004;
+}
+.brand-img {
+  margin-bottom: 18px;
+  display: block;
+}
+.brand-text {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.brand-bold {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.brand-script {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.brand-oslo {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+}
+.brand-cairo {
+  font-family: 'Cairo Play', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2.3rem;
+}

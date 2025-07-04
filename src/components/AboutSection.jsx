@@ -152,8 +152,10 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
+      <BrandLogos />
     </section>
   );
 };
 
+import BrandLogos from "./BrandLogos";
 export default AboutSection;
