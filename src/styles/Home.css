@@ -392,11 +392,30 @@ html, body {
   border-radius: 8px;
   border: 1px solid #333;
   transition: all 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.image-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(50%) brightness(0.8);
+  transition: all 0.3s ease;
 }
 
 .image-thumb:hover {
   border-color: #666;
   background: #222;
+  transform: translateY(-2px);
+}
+
+.image-thumb:hover img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.1);
 }
 
 .phase-title {

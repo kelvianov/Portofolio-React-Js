@@ -35,15 +35,23 @@ const AboutSection = () => {
               </div>
             </div>
             <div className="phase-images">
-              <div className="image-thumb"></div>
-              <div className="image-thumb"></div>
-              <div className="image-thumb"></div>
-              <div className="image-thumb"></div>
+              <div className="image-thumb">
+                <img src="https://skillicons.dev/icons?i=figma&theme=light" alt="Figma" />
+              </div>
+              <div className="image-thumb">
+                <img src="https://skillicons.dev/icons?i=photoshop&theme=light" alt="Photoshop" />
+              </div>
+              <div className="image-thumb">
+                <img src="https://skillicons.dev/icons?i=git&theme=light" alt="Git" />
+              </div>
+              <div className="image-thumb">
+                <img src="https://skillicons.dev/icons?i=vscode&theme=light" alt="VS Code" />
+              </div>
             </div>
             <h3 className="phase-title">DISCOVER AND ANALYSIS</h3>
             <p className="phase-description">
-              Discover opportunities and refine<br />
-              strategies for decisions.
+              Research, planning, and wireframing<br />
+              with design and development tools.
             </p>
           </div>
           
@@ -55,14 +63,24 @@ const AboutSection = () => {
               </div>
             </div>
             <div className="phase-images">
-              <div className="image-thumb"></div>
-              <div className="image-thumb"></div>
-              <div className="image-thumb"></div>
+              <div className="image-thumb">
+                <img src="https://skillicons.dev/icons?i=html&theme=light" alt="HTML5" />
+              </div>
+              <div className="image-thumb">
+                <img src="https://skillicons.dev/icons?i=css&theme=light" alt="CSS3" />
+              </div>
+              <div className="image-thumb">
+                <img src="https://skillicons.dev/icons?i=vite&theme=light" alt="Vite" />
+              </div>
+              <div className="image-thumb">
+                <img src="https://skillicons.dev/icons?i=react&theme=light" alt="React" />
+              </div>
+              
             </div>
             <h3 className="phase-title">DESIGN AND IMPLEMENT</h3>
             <p className="phase-description">
-              Design and implement solutions to<br />
-              transform ideas.
+              Frontend development with modern<br />
+              web technologies and frameworks.
             </p>
           </div>
           
@@ -75,13 +93,23 @@ const AboutSection = () => {
               </div>
             </div>
             <div className="phase-images">
-              <div className="image-thumb"></div>
-              <div className="image-thumb"></div>
+              <div className="image-thumb">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
+              </div>
+              <div className="image-thumb">
+                <img src="https://skillicons.dev/icons?i=laravel&theme=light" alt="Laravel" />
+              </div>
+              <div className="image-thumb">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+              </div>
+              <div className="image-thumb">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+              </div>
             </div>
             <h3 className="phase-title">DELIVER AND MONITOR</h3>
             <p className="phase-description">
-              Ensure efficient execution and<br />
-              performance tracking.
+              Backend development and server-side<br />
+              implementation with deployment.
             </p>
           </div>
         </div>
