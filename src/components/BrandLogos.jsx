@@ -4,37 +4,35 @@ import "../styles/BrandLogos.css";
 const brands = [
   {
     name: "Basel",
-    img: null,
-    style: {},
     textClass: "brand-bold"
   },
   {
     name: "theo",
-    img: null,
-    style: {},
     textClass: "brand-script"
   },
   {
     name: "oslo.",
-    img: null,
-    style: {},
     textClass: "brand-oslo"
   },
   {
     name: "Cairo",
-    img: null,
-    style: {},
     textClass: "brand-cairo"
+  },
+  {
+    name: "Manila.",
+    textClass: "brand-bold"
   }
 ];
 
 const BrandLogos = () => (
-  <div className="brand-logos-section">
-    {brands.map((brand) => (
-      <div className="brand-card" key={brand.name}>
-        <span className={`brand-text ${brand.textClass}`}>{brand.name}</span>
-      </div>
-    ))}
+  <div className="brand-logos-marquee-wrapper">
+    <div className="brand-logos-section brand-logos-marquee">
+      {brands.concat(brands).map((brand, idx) => (
+        <div className="brand-card" key={brand.name + idx}>
+          <span className={`brand-text ${brand.textClass}`}>{brand.name}</span>
+        </div>
+      ))}
+    </div>
   </div>
 );
 

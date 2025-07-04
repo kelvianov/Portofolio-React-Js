@@ -1,11 +1,41 @@
-.brand-logos-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  margin: 60px auto 0 auto;
+
+.brand-logos-marquee-wrapper {
+  overflow: hidden;
+  width: 100vw;
+  margin: 60px 0 0 0;
   padding-bottom: 40px;
-  /* background removed */
+}
+
+.brand-logos-section.brand-logos-marquee {
+  display: flex;
+  gap: 40px;
+  animation: brand-marquee 18s linear infinite;
+  will-change: transform;
+}
+
+@keyframes brand-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.brand-card {
+  background: #111;
+  border-radius: 18px;
+  width: 300px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 16px 0 #0002;
+  position: relative;
+  transition: transform 0.2s;
+  min-width: 300px;
+  margin: 0 0;
 }
 
 .brand-card {
