@@ -29,7 +29,7 @@ const AboutSection = () => {
           <div className="phase">
             <div className="phase-dots">
               <div className="dot-indicator">
-                <div className="dot"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
                 <div className="dot"></div>
               </div>
@@ -58,7 +58,8 @@ const AboutSection = () => {
           <div className="phase">
             <div className="phase-dots">
               <div className="dot-indicator">
-                <div className="dot"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
               </div>
             </div>
@@ -87,9 +88,9 @@ const AboutSection = () => {
           <div className="phase">
             <div className="phase-dots">
               <div className="dot-indicator">
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
               </div>
             </div>
             <div className="phase-images">
