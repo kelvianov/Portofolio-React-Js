@@ -1,7 +1,34 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../styles/AboutSection.css';
 
 const AboutSection = () => {
+  const titleRef = useRef(null);
+  const [titleVisible, setTitleVisible] = useState(false);
+
+  useEffect(() => {
+    const currentTitle = titleRef.current;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTitleVisible(true);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (currentTitle) {
+      observer.observe(currentTitle);
+    }
+
+    return () => {
+      if (currentTitle) {
+        observer.unobserve(currentTitle);
+      }
+    };
+  }, []);
+
   return (
     <section className="about-section">
       <div className="about-header">
@@ -11,8 +38,13 @@ const AboutSection = () => {
       </div>
       
       <div className="about-content">
-        <h2 className="about-title">
-          I'M KELVIANOV BASED IN BANDUNG, INDONESIA.
+        <h2 ref={titleRef} className={`about-title ${titleVisible ? 'animate' : ''}`}>
+          <span className="word">I'M</span>
+          <span className="word">KELVIANOV</span>
+          <span className="word">BASED</span>
+          <span className="word">IN</span>
+          <span className="word">BANDUNG,</span>
+          <span className="word">INDONESIA.</span>
         </h2>
         
         <p className="about-description">
