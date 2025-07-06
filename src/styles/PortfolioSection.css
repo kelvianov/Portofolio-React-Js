@@ -141,8 +141,8 @@
 /* Card Style */
 .portfolio-card {
   background: transparent;
-  border-radius: 16px;
-  box-shadow: 0 2px 16px 0 #0002;
+  border-radius: 0;
+  box-shadow: none;
   width: 520px;
   height: auto;
   display: flex;
@@ -159,7 +159,7 @@
   object-fit: cover;
   filter: brightness(0.92) contrast(1.05);
   transition: filter 0.3s;
-  border-radius: 16px 16px 0 0;
+  border-radius: 12px;
 }
 .portfolio-card:hover .portfolio-img {
   filter: brightness(1) contrast(1.1) saturate(1.1);
@@ -168,14 +168,14 @@
 /* Footer content di bawah image */
 .portfolio-card-footer {
   background: transparent;
+  margin-top: 5px;
   padding: 20px 28px;
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: left;
   gap: 18px;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
+  border-radius: 0;
 }
 
 .portfolio-card-footer-content {
