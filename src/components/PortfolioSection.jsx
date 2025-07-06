@@ -31,7 +31,7 @@ const PortfolioSection = () => {
   const [titleVisible, setTitleVisible] = useState(false);
 
   // Custom cursor state
-  const [cursor, setCursor] = useState({ show: false, x: 0, y: 0 });
+  const [cursor, setCursor] = useState({ show: false, x: 0, y: 0, dark: false });
 
   useEffect(() => {
     const currentTitle = titleRef.current;
@@ -53,20 +53,26 @@ const PortfolioSection = () => {
 
   // Handler for custom cursor
   const handleImgEnter = (e) => {
-    setCursor({ show: true, x: e.clientX, y: e.clientY });
+    const isDark = e.target.dataset.cursor === "dark";
+    setCursor({ show: true, x: e.clientX, y: e.clientY, dark: isDark });
   };
   const handleImgMove = (e) => {
-    setCursor({ show: true, x: e.clientX, y: e.clientY });
+    const isDark = e.target.dataset.cursor === "dark";
+    setCursor({ show: true, x: e.clientX, y: e.clientY, dark: isDark });
   };
   const handleImgLeave = () => {
-    setCursor({ show: false, x: 0, y: 0 });
+    setCursor({ show: false, x: 0, y: 0, dark: false });
   };
 
   return (
     <section className="portfolio-section">
       {/* Custom Cursor */}
       <div
-        className={"portfolio-img-cursor" + (cursor.show ? " active" : "")}
+        className={
+          "portfolio-img-cursor" +
+          (cursor.show ? " active" : "") +
+          (cursor.dark ? " dark" : "")
+        }
         style={{
           left: cursor.x,
           top: cursor.y,
@@ -165,6 +171,7 @@ const PortfolioSection = () => {
             src={portfolioData[1].image}
             alt={portfolioData[1].title}
             className="portfolio-img"
+            data-cursor="dark"
             onMouseEnter={handleImgEnter}
             onMouseMove={handleImgMove}
             onMouseLeave={handleImgLeave}

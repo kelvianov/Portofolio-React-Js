@@ -223,9 +223,13 @@
   border-radius: 999px;
   box-shadow: 0 2px 12px #0002;
   letter-spacing: 0.04em;
-  transition: opacity 0.18s, transform 0.18s;
+  transition: opacity 0.18s, transform 0.18s, background 0.18s, color 0.18s;
   opacity: 0;
   user-select: none;
+}
+.portfolio-img-cursor.dark {
+  background: #111 !important;
+  color: #fff !important;
 }
 .portfolio-img-cursor.active {
   display: block;
