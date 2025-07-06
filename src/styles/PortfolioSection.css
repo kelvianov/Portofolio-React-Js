@@ -60,18 +60,21 @@
   letter-spacing: 1px;
 }
 .portfolio-section-number {
-  color: #b6e0f7;
+  color: #fff;
   font-weight: 600;
+  margin-left: -80px;
 }
 .portfolio-section-title {
   margin: 0 auto;
   color: #b6b6b6;
   font-weight: 500;
+  margin-left: 20px;
 }
 .portfolio-section-year {
   color: #b6b6b6;
   font-size: 12px;
   font-weight: 400;
+  margin-right: -100px;
 }
 
 /* Title */

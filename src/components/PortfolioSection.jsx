@@ -61,7 +61,7 @@ const PortfolioSection = () => (
               {[...Array(portfolioData[0].dots)].map((_, i) => (
                 <span
                   key={i}
-                  className={i === portfolioData[0].activeDot ? "dot active" : "dot"}
+                  className={i <= portfolioData[0].activeDot ? "dot active" : "dot"}
                 ></span>
               ))}
             </div>
@@ -86,7 +86,7 @@ const PortfolioSection = () => (
               {[...Array(portfolioData[2].dots)].map((_, i) => (
                 <span
                   key={i}
-                  className={i === portfolioData[2].activeDot ? "dot active" : "dot"}
+                  className={i <= portfolioData[2].activeDot ? "dot active" : "dot"}
                 ></span>
               ))}
             </div>
@@ -111,7 +111,7 @@ const PortfolioSection = () => (
               {[...Array(portfolioData[1].dots)].map((_, i) => (
                 <span
                   key={i}
-                  className={i === portfolioData[1].activeDot ? "dot active" : "dot"}
+                  className={i <= portfolioData[1].activeDot ? "dot active" : "dot"}
                 ></span>
               ))}
             </div>
