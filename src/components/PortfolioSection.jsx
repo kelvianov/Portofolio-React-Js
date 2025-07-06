@@ -31,7 +31,7 @@ const PortfolioSection = () => (
       {/* Atas */}
       <div className="portfolio-header">
         <span className="portfolio-section-number">02</span>
-        <span className="portfolio-section-title">//PORTFOLIO</span>
+        <span className="portfolio-section-title">//PROJECT</span>
         <span className="portfolio-section-year">2019 - 2025</span>
       </div>
       <div className="portfolio-title-block">
