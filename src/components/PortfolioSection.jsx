@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../styles/PortfolioSection.css";
 
 const portfolioData = [
@@ -25,28 +25,56 @@ const portfolioData = [
   },
 ];
 
-const PortfolioSection = () => (
-  <section className="portfolio-section">
-    <div className="portfolio-grid">
-      {/* Atas */}
-      <div className="portfolio-header">
-        <span className="portfolio-section-number">02</span>
-        <span className="portfolio-section-title">//PROJECT</span>
-        <span className="portfolio-section-year">2019 - 2025</span>
-      </div>
-      <div className="portfolio-title-block">
-        <h2 className="portfolio-title">
-          <span>LATEST</span>
-          <br />
-          <span>PROJECT</span>
-        </h2>
-      </div>
-      <div className="portfolio-desc-block">
-        <p className="portfolio-desc">
-          My creative spirit comes alive in the digital realm. With nimble<br />
-          fingers flying across the device.
-        </p>
-      </div>
+const PortfolioSection = () => {
+  const titleRef = useRef(null);
+  const [titleVisible, setTitleVisible] = useState(false);
+
+  useEffect(() => {
+    const currentTitle = titleRef.current;
+    const observer = new window.IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTitleVisible(true);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    if (currentTitle) observer.observe(currentTitle);
+    return () => {
+      if (currentTitle) observer.unobserve(currentTitle);
+    };
+  }, []);
+
+  return (
+    <section className="portfolio-section">
+      <div className="portfolio-grid">
+        {/* Atas */}
+        <div className="portfolio-header">
+          <span className="portfolio-section-number">02</span>
+          <span className="portfolio-section-title">//PROJECT</span>
+          <span className="portfolio-section-year">2019 - 2025</span>
+        </div>
+        <div className="portfolio-title-block">
+          <h2
+            ref={titleRef}
+            className={`portfolio-title${titleVisible ? " animate" : ""}`}
+          >
+            <div className="title-line">
+              <span className="word">LATEST</span>
+            </div>
+            <div className="title-line">
+              <span className="word">PROJECT</span>
+            </div>
+          </h2>
+        </div>
+        <div className="portfolio-desc-block">
+          <p className="portfolio-desc">
+            My creative spirit comes alive in the digital realm. With nimble<br />
+            fingers flying across the device.
+          </p>
+        </div>
 
       {/* Bawah */}
       <div className="portfolio-card-left">
@@ -123,8 +151,10 @@ const PortfolioSection = () => (
           </div>
         </div>
       </div>
+
     </div>
   </section>
-);
+  );
+};
 
 export default PortfolioSection;
