@@ -18,7 +18,7 @@
 }
 
 .hero-title {
-  font-size: clamp(140px, 16vw, 220px);
+  font-size: clamp(149px, 16vw, 226px);
   font-weight: 900;
   letter-spacing: -5px;
   margin: 0;
@@ -31,6 +31,7 @@
   opacity: 0;
   animation: fadeInScale 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
   margin-right: 20px;
+  margin-bottom: -10px;
 }
 
 /* Hero Image */
