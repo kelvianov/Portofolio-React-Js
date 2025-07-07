@@ -10,6 +10,7 @@
   /* Pastikan tinggi section terdefinisi dengan baik */
   min-height: 100vh;
   overflow: hidden; /* Prevent content overflow issues */
+  margin-top: -30px; /* Adjusted margin for better spacing */
 }
 .aboutv2-section-header {
   grid-column: 1 / 3;
