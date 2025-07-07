@@ -5,6 +5,7 @@ import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
 import PortfolioSection from '../components/PortfolioSection';
 import AboutV2Section from '../components/AboutV2Section';
+import CertificateSection from '../components/CertificateSection';
 
 const Home = () => {
   // Scroll ke atas saat component dimount
@@ -69,6 +70,9 @@ const Home = () => {
 
       {/* About V2 Section */}
       <AboutV2Section />
+
+      {/* Certificate Section */}
+      <CertificateSection />
     </div>
   );
 };
