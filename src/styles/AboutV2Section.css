@@ -1,3 +1,21 @@
+.aboutv2-image-container {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutv2-image {
+  display: block;
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 24px #0008);
+}
 .aboutv2-section {
   background: #0a0a0a;
   background-image:
@@ -47,26 +65,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex: 1;
   min-height: 70vh;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 80px;
+  position: relative;
 }
 
 .aboutv2-section-title-main {
   font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;
-  font-size: 8vw; /* Increased from 6vw */
+  font-size: 8vw;
   font-weight: 900;
   text-align: center;
-  letter-spacing: -0.03em; /* Tighter letter spacing */
-  line-height: 0.85; /* Tighter line height */
+  letter-spacing: -0.03em;
+  line-height: 0.85;
   margin: 0 auto;
-  margin-top: 7vh;
+  margin-top: 40px;
   text-transform: uppercase;
   display: inline-block;
   color: #ffffff;
-  text-shadow: 0 0 1px rgba(255,255,255,0.1); /* Subtle glow for crispness */
+  text-shadow: 0 0 1px rgba(255,255,255,0.1);
+  z-index: 2;
+  position: relative;
+  /* Remove transition untuk smooth manual control */
 }
 
 .aboutv2-section-title-main br {
@@ -74,40 +96,63 @@
 }
 
 .aboutv2-section-copyright {
-  font-size: 0.4em; /* Smaller copyright symbol */
+  font-size: 0.4em;
   vertical-align: super;
   margin-left: 0.1em;
   font-weight: 400;
 }
 
 .aboutv2-image-container {
-  margin-top: 60px; /* Jarak dari tulisan */
+  position: relative;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  margin-top: 0px;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  transform: none;
 }
 
 .aboutv2-image {
-  max-width: 500px; /* Sesuaikan ukuran sesuai kebutuhan */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
   width: 100%;
   height: auto;
-  border-radius: 8px; /* Optional: rounded corners */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Optional: shadow effect */
-  transition: transform 0.3s ease; /* Optional: hover effect */
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 3;
 }
-
-.aboutv2-image:hover {
-  transform: scale(1.02); /* Optional: slight zoom on hover */
+.aboutv2-image {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .aboutv2-image {
-    max-width: 90%;
+  .aboutv2-section-title-main {
+    font-size: 12vw;
   }
   
-  .aboutv2-image-container {
-    margin-top: 40px;
+  .aboutv2-image {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutv2-section-title-main {
+    font-size: 15vw;
+  }
+  
+  .aboutv2-image {
+    max-width: 280px;
   }
 }

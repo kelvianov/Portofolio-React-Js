@@ -1,24 +1,93 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../styles/AboutV2Section.css';
 
 const AboutV2Section = () => {
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Trigger yang lebih lambat - animasi mulai ketika section hampir di tengah layar
+        const startTrigger = windowHeight * 0.3; // Mulai ketika 30% section terlihat
+        const endTrigger = windowHeight * -0.3;  // Selesai ketika section hampir keluar layar
+        
+        let progress = 0;
+        
+        if (rect.top <= startTrigger && rect.top >= endTrigger) {
+          progress = (startTrigger - rect.top) / (startTrigger - endTrigger);
+          progress = Math.max(0, Math.min(1, progress));
+        } else if (rect.top < endTrigger) {
+          progress = 1;
+        }
+        
+        setScrollProgress(progress);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section className="aboutv2-section">
+    <section className="aboutv2-section" ref={sectionRef}>
       <div className="aboutv2-section-header">
         <span className="aboutv2-section-number">03</span>
         <span className="aboutv2-section-titlebar">//WHO AM I</span>
         <span className="aboutv2-section-since">SINCE 2025</span>
       </div>
       <div className="aboutv2-section-content">
-        <h1 className="aboutv2-section-title-main">
-          MORE ABOUT<br/>KELVIANOV<span className="aboutv2-section-copyright">©</span>
-        </h1>
-        <div className="aboutv2-image-container">
-          <img 
-            src="/images/aboutV2.png" 
-            alt="About Kelvianov" 
-            className="aboutv2-image"
-          />
+        <div style={{position: 'relative', width: '100%'}}>
+          <h1 
+            className="aboutv2-section-title-main"
+            style={{
+              transform: `translateY(${scrollProgress * -120}px)`,
+              zIndex: 1,
+              position: 'relative',
+              transition: 'transform 0.3s'
+            }}
+          >
+            MORE ABOUT<br/>KELVIANOV<span className="aboutv2-section-copyright">©</span>
+          </h1>
+          <div 
+            className="aboutv2-image-container"
+            style={{
+              marginTop: '-60px',
+              zIndex: 2,
+              position: 'absolute',
+              left: 0,
+              right: 0,
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              top: '0',
+              height: '100vh',
+              transform: `translateY(${400 - (scrollProgress * 400)}px)`,
+              opacity: scrollProgress > 0.05 ? 1 : 0,
+              transition: 'transform 0.3s, opacity 0.3s',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'flex-start',
+              overflow: 'visible'
+            }}
+          >
+            <img 
+              src="/images/aboutV2.png" 
+              alt="About Kelvianov" 
+              className="aboutv2-image"
+              style={{
+                maxHeight: '100vh',
+                width: 'auto',
+                maxWidth: '100%',
+                objectFit: 'contain',
+                display: 'block',
+                margin: '0 auto'
+              }}
+            />
+          </div>
         </div>
       </div>
     </section>
