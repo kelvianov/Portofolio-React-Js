@@ -100,13 +100,14 @@ const AboutV2Section = () => {
                 I&apos;m on the cutting edge of no-code tools that allow me to bring my creative visions to life. Though my methods may be unconventional, my dedication to the craft is unparalleled. I thrive on finding &quot;unexpected solutions&quot; and believe that with the right perspective, design can elevate the human experience.
               </div>
               {/* Tombol Download Resume */}
-              <a
-                href="/resume.pdf"
-                download
+                <a
+                href="/assets/CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="aboutv2-download-btn"
-              >
+                >
                 DOWNLOAD RESUME
-              </a>
+                </a>
             </div>
           )}
         </div>
