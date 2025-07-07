@@ -89,6 +89,26 @@ const AboutV2Section = () => {
               }}
             />
           </div>
+          {/* Tampilkan deskripsi di bawah gambar jika scroll sudah selesai (progress 1) */}
+          {scrollProgress === 1 && (
+            <div className="aboutv2-desc-wrapper">
+              <div className="aboutv2-desc-title">
+                I&apos;M AN INNOVATIVE DESIGNER AND DIGITAL ARTIST IN USA.<br/>
+                MY PASSION FOR MINIMALIST AESTHETICS, ELEGANT TYPOGRAPHY, AND INTUITIVE DESIGN SHINES THROUGH IN MY WORK.
+              </div>
+              <div className="aboutv2-desc-text">
+                I&apos;m on the cutting edge of no-code tools that allow me to bring my creative visions to life. Though my methods may be unconventional, my dedication to the craft is unparalleled. I thrive on finding &quot;unexpected solutions&quot; and believe that with the right perspective, design can elevate the human experience.
+              </div>
+              {/* Tombol Download Resume */}
+              <a
+                href="/resume.pdf"
+                download
+                className="aboutv2-download-btn"
+              >
+                DOWNLOAD RESUME
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </section>
