@@ -21,7 +21,7 @@ const ContactSection = () => {
         <div className="contact-section-extra-row">
           <span className="contact-section-extra-left">BASED IN INDONESIA,<br /><span className="contact-section-extra-sub">BANDUNG</span></span>
           <span className="contact-section-extra-center">
-            BASED IN USA, I AM AN INNOVATIVE DESIGNER AND DIGITAL ARTIST. MY PASSION FOR MINIMALIST AESTHETICS, ELEGANT TYPOGRAPHY, AND INTUITIVE DESIGN IS EVIDENT IN MY WORK.
+            BASED IN INDONESIA, I’M A SOFTWARE ENGINEER COMBINING CLEAN CODE, MINIMALIST DESIGN, AND SEAMLESS USER EXPERIENCES TO CRAFT IMPACTFUL DIGITAL SOLUTIONS.
           </span>
           <span className="contact-section-extra-right">WEB DEVELOPER<br /><span className="contact-section-extra-sub">+ FULL STACK DEVELOPER</span></span>
         </div>
