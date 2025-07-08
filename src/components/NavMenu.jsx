@@ -89,13 +89,20 @@ const NavMenu = ({ currentPage = 'home' }) => {
         </div>
 
         {/* Footer */}
-        <footer className="menu-footer">
+     <footer className="menu-footer">
           <div className="menu-footer-left">
-            <span>©2024 ALL RIGHTS RESERVED</span>
+            <span>©2025 ALL RIGHTS RESERVED</span>
           </div>
           <div className="menu-footer-right">
-            <span>INSTAGRAM ↗</span>
-            <span>DRIBBBLE ↗</span>
+            <a href="https:/www.instagram.com/kelvianov/" target="_blank" rel="noopener noreferrer">
+              <span>INSTAGRAM ↗</span>
+            </a>
+            <a href="https://github.com/kelvianov" target="_blank" rel="noopener noreferrer">
+              <span>GITHUB ↗</span>
+            </a>
+            <a href="https://www.linkedin.com/in/kelvianov/" target="_blank" rel="noopener noreferrer">
+              <span>LINKEDIN ↗</span>
+            </a>
           </div>
         </footer>
       </div>

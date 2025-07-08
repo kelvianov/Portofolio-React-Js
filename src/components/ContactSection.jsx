@@ -57,7 +57,7 @@ const ContactSection = () => {
           </span>
         </div>
         <div className="contact-section-copyright">
-          <span>©2024 KELVIANOV DESIGN</span>
+          <span>©2025 KELVIANOV DESIGN</span>
         </div>
       </div>
     </section>
