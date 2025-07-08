@@ -103,13 +103,15 @@
   display: flex;
   gap: 8px;
   align-items: center;
+  margin-top: x; /* Adjusted to align with header */
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   display: inline-block;
+  transition: background 0.2s, width 0.2s, height 0.2s;
 }
 
 .dot.active {
@@ -128,16 +130,19 @@
 .certificate-accordion-text strong {
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.08rem;
   color: #fff;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   display: block;
+  letter-spacing: 0.01em;
 }
 
 .certificate-accordion-sub {   
   color: #888;   
-  font-size: 0.9rem;   
+  font-size: 0.85rem;   
   font-weight: 400;
+  letter-spacing: 0.01em;
+  margin-top: 0px;
   font-family: 'Montserrat', Arial, sans-serif;
   letter-spacing: 0.5px;
   margin-top: 2px;
@@ -194,21 +199,26 @@
   margin-top: 8px;
 } 
 
+
 .certificate-accordion-body li {   
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   display: flex;
   align-items: center;
   color: #fff;
+  letter-spacing: 0.01em;
 } 
 
+  
 .certificate-accordion-body li::before {
   content: "✓";
-  color: #4CAF50;
+  color: #fff;
   font-weight: bold;
-  margin-right: 12px;
-  font-size: 1rem;
+  margin-right: 10px;
+  font-size: 0.9em;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* Hover effects removed */
