@@ -3,80 +3,77 @@ import '../styles/CertificateSection.css';
 
 const certificates = [
   {
-    title: 'Full Website Sprint',
-    subtitle: 'EFFORTLESS EXECUTION, RAPID RESULTS',
-    details: [
-      'PRICING STARTS AT $3,999',
-      'KICKOFF & PLANNING',
-      'DESIGN & PROTOTYPING',
-      'DEVELOPMENT & TESTING',
-      'LAUNCH & OPTIMIZATION'
+  title: 'Advanced Python Certification',
+  subtitle: 'CERTIFIED BY SKILVUL',
+  details: [
+  'COMPLETED ON FEBRUARY 24, 2024',
+  'CERTIFIED: KELVIANOV PUTRA KESUMA',
+  'ADVANCED PYTHON COURSE',
+  'ISSUED BY: SKILVUL.COM',
+  'SIGNED BY: AMANDA SIMANDJUNTAK, CPO'
     ],
     image: '/images/certificate1.jpg',
     dots: 1
   },
   {
-    title: 'Motion Design',
-    subtitle: 'INTERACTION DESIGN, USABILITY AUDITS',
-     details: [
-      'PRICING STARTS AT $3,999',
-      'KICKOFF & PLANNING',
-      'DESIGN & PROTOTYPING',
-      'DEVELOPMENT & TESTING',
-      'LAUNCH & OPTIMIZATION'
+  title: 'Internship Certificate',
+  subtitle: 'PT ERKA SOLUTION GROUP',
+  details: [
+  'COMPLETED FROM  OCT 2024 – MAR 2025',
+  'CERTIFIED: KELVIANOV PUTRA KESUMA',
+  'FIELD: SOFTWARE ENGINEERING',
+  'PERFORMANCE RATED: "GOOD"',
+  'ISSUED ON: APRIL 8, 2025'
     ],
     image: '/images/certificate2.jpg',
     dots: 2
   },
   {
-    title: 'Full Design Package',
-    subtitle: 'LOGO CREATION, TYPOGRAPHY, MATERIALS',
-    details: [
-      'PRICING STARTS AT $3,999',
-      'KICKOFF & PLANNING',
-      'DESIGN & PROTOTYPING',
-      'DEVELOPMENT & TESTING',
-      'LAUNCH & OPTIMIZATION'
-    ],
+  title: 'React Fundamentals Certification',
+  subtitle: 'CERTIFIED BY SKILVUL',
+  details: [
+  'COMPLETED ON MAY 18, 2025',
+  'CERTIFIED: KELVIANOV PUTRA KESUMA',
+  'REACT FUNDAMENTALS COURSE',
+  'ISSUED BY: SKILVUL.COM',
+  'SIGNED BY: AMANDA SIMANDJUNTAK, CPO'
+],
     image: '/images/certificate3.jpg',
     dots: 3
   },
   {
-    title: 'React Development',
-    subtitle: 'FULL WEBSITE DEVELOPMENT',
-    details: [
-      'PRICING STARTS AT $3,999',
-      'KICKOFF & PLANNING',
-      'DESIGN & PROTOTYPING',
-      'DEVELOPMENT & TESTING',
-      'LAUNCH & OPTIMIZATION'
-    ],
+  title: 'Front-End Development Introduction',
+  subtitle: 'MYSKILL CERTIFICATION',
+  details: [
+  'AWARDED ON MAY 18, 2025',
+  'RECIPIENT: KELVIANOV',
+  'TOPIC: WEBSITE DEVELOPMENT FUNDAMENTALS',
+  'SIGNED BY: ANGGA FAUZAN, CEO MYSKILL'
+],
     image: '/images/certificate4.jpg',
     dots: 4
   },
   {
-    title: 'Web Design',
-    subtitle: 'FIGMA FILE, SKETCH FILE',
-    details: [
-      'PRICING STARTS AT $3,999',
-      'KICKOFF & PLANNING',
-      'DESIGN & PROTOTYPING',
-      'DEVELOPMENT & TESTING',
-      'LAUNCH & OPTIMIZATION'
-    ],
+  title: 'MySQL Database Development Mastery',
+  subtitle: 'UDEMY CERTIFICATION',
+  details: [
+  'AWARDED ON JUNE 9, 2025',
+  'RECIPIENT: KELVIANOV PUTRA KESUMA',
+  'MASTERED: SQL QUERIES, & DATABASE DESIGN',
+  'INSTRUCTORS: TREVOIR WILLIAMS, LEARN IT UNIVERSITY, ANDRII PIATAKHA',
+],
     image: '/images/certificate5.jpg',
     dots: 5
-  },
-    {
-    title: 'Web Design',
-    subtitle: 'FIGMA FILE, SKETCH FILE',
+  },  
+  {
+    title: 'CSS & JavaScript Essentials',
+    subtitle: 'UDEMY CERTIFICATION',
     details: [
-      'PRICING STARTS AT $3,999',
-      'KICKOFF & PLANNING',
-      'DESIGN & PROTOTYPING',
-      'DEVELOPMENT & TESTING',
-      'LAUNCH & OPTIMIZATION'
-    ],
+    'AWARDED ON JUNE 9, 2025',
+    'RECIPIENT: KELVIANOV PUTRA KESUMA',
+    'MASTERED: CORE CONCEPTS IN CSS & JAVASCRIPT',
+    'INSTRUCTOR: PROPER DOT INSTITUTE'
+],
     image: '/images/certificate6.jpg',
     dots: 6
   },
