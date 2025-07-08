@@ -58,7 +58,7 @@
 }
 .contact-section {
   width: 100vw;
-  min-height: 60vh;
+  min-height: 120vh;
   background: #0a0a0a;
   background-image:
     linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px),
@@ -69,6 +69,7 @@
   justify-content: center;
   padding: 0;
   margin: 0;
+  margin-top: -250px;
 }
 
 .contact-center {
