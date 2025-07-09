@@ -45,6 +45,47 @@ const Project = () => {
           <span className="project-info-value">3-4 WEEKS</span>
         </div>
       </div>
+        {/* Research Section */}
+      <div className="project-section research-section">
+        <div className="research-title">RESEARCH</div>
+        <div className="research-desc">
+          Research is the cornerstone of innovation and progress, involving the systematic investigation of questions, problems, or phenomena to uncover new knowledge or insights. It enables us to validate theories, develop solutions, and deepen our understanding of the world.
+        </div>
+      </div>
+
+      {/* Design Section */}
+      <div className="project-section design-section">
+        <div className="design-title">DESIGN</div>
+        <div className="design-desc">
+          Design plays a crucial role in shaping perceptions and creating memorable experiences. A well-crafted design not only communicates ideas effectively but also evokes emotions, captures attention, and builds trust. From striking visuals to thoughtful layouts, every element of design contributes to telling a unique story.
+        </div>
+      </div>
+
+      {/* Gambar project1.1.png di bawah Design Section */}
+      <div className="project-image-block" style={{ marginTop: '170px' }}>
+        <img
+          src="/images/project1.1.png"
+          alt="Design Section Project"
+          className="project-main-image"
+        />
+      </div>
+
+      {/* Development Section */}
+      <div className="project-section development-section">
+        <div className="development-title">DEVELOPMENT</div>
+        <div className="development-desc">
+          Seventy Seven is meticulously crafted with cutting-edge web technologies to ensure a seamless user experience. The portfolio is built for speed, responsiveness, and adaptability across devices, making it accessible to all audiences. Every detail, from interactive elements to smooth animations, has been carefully optimized to create an engaging and modern digital showcase.
+        </div>
+      </div>
+
+      {/* Gambar project1.2.png di bawah Development Section */}
+      <div className="project-image-block" style={{ marginTop: '150px' }}>
+        <img
+          src="/images/project1.2.png"
+          alt="Development Section Project"
+          className="project-main-image"
+        />
+      </div>
     </div>
   );
 };
