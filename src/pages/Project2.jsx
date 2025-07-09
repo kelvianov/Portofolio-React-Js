@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/project/Project2.css";
 
 import Header from "../components/Header";
@@ -6,6 +7,7 @@ import InfiniteMarquee from "../components/InfiniteMarquee";
 import ContactSection from "../components/ContactSection";
 
 const Project2 = () => {
+  const navigate = useNavigate();
   const handleLivePreview = () => {
     window.open("https://kosku-react.vercel.app/", "_blank");
   };
@@ -115,7 +117,7 @@ const Project2 = () => {
       {/* More Works Cards Section */}
       <div className="project-more-works-cards-row" style={{ marginBottom: '120px' }}>
         {/* Card 1 */}
-        <div className="portfolio-card project-more-works-card"
+        <div className="portfolio-card project-more-works-card portofolio-card"
           onMouseEnter={() => {
             const cursor = document.querySelector('.portfolio-img-cursor');
             if(cursor) {
@@ -139,8 +141,8 @@ const Project2 = () => {
           }}
         >
           <img
-            src="/images/project1.0.png"
-            alt="Company Profile Project"
+            src="/images/project3.0.png"
+            alt="Portofolio Project"
             className="portfolio-img"
             style={{ borderRadius: '12px' }}
           />
@@ -151,15 +153,22 @@ const Project2 = () => {
               ))}
             </div>
             <div className="portfolio-card-footer-content">
-              <div className="portfolio-card-title">Company Profile</div>
-              <div className="portfolio-card-subtitle">WEBSITE</div>
+              <div className="portfolio-card-title">Portofolio Project</div>
+              <div className="portfolio-card-subtitle">LENSWORK SHOWCASE</div>
             </div>
             <div className="portfolio-arrow">→</div>
           </div>
         </div>
 
         {/* Card 2 */}
-        <div className="portfolio-card project-more-works-card"
+        <div
+          className="portfolio-card project-more-works-card"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(() => {
+              navigate('/project1');
+            }, 200); // beri delay agar animasi smooth jika ada
+          }}
           onMouseEnter={() => {
             const cursor = document.querySelector('.portfolio-img-cursor');
             if(cursor) cursor.classList.add('active');
@@ -175,10 +184,11 @@ const Project2 = () => {
             const cursor = document.querySelector('.portfolio-img-cursor');
             if(cursor) cursor.classList.remove('active');
           }}
+          style={{ cursor: 'pointer' }}
         >
           <img
-            src="/images/project3.0.png"
-            alt="Portofolio Project"
+            src="/images/project1.0.png"
+            alt="Company Profile Project"
             className="portfolio-img"
             style={{ borderRadius: '12px' }}
           />
@@ -189,8 +199,8 @@ const Project2 = () => {
               ))}
             </div>
             <div className="portfolio-card-footer-content">
-              <div className="portfolio-card-title">Portofolio</div>
-              <div className="portfolio-card-subtitle">LENSWORK SHOWCASE</div>
+              <div className="portfolio-card-title">Company Profile Project</div>
+              <div className="portfolio-card-subtitle">WEBSITE</div>
             </div>
             <div className="portfolio-arrow">→</div>
           </div>

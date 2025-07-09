@@ -1,8 +1,9 @@
 @import url('./Project1.css');
 
-/* You can override or add specific styles for Project2 below if needed */
-
-/* Card 2 (Portofolio/Landscape) */
-.project-more-works-card:last-child {
-  width: 655px;
+.project-more-works-card.portofolio-card {
+  width: 655px !important;
+  min-width: 0;
+  max-width: 100%;
 }
+
+
