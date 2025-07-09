@@ -76,7 +76,7 @@
 
 /* Card 1 (Portofolio/Landscape) */
 .project-more-works-card:first-child {
-  width: 655px;
+  width: 700px;
 }
 
 /* More Works Cards Row Layout */
@@ -427,4 +427,11 @@
   background: #222;
   color: #fff;
   transform: translateY(-2px) scale(1.04);
+}
+
+/* Perkecil card Portofolio khusus untuk project3.0.png */
+.project-more-works-card.portofolio-card {
+  width: 655px !important;
+  min-width: 0;
+  max-width: 100%;
 }

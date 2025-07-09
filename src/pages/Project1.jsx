@@ -119,7 +119,7 @@ const Project = () => {
       {/* More Works Cards Section */}
       <div className="project-more-works-cards-row" style={{ marginBottom: '120px' }}>
         {/* Card 1 */}
-        <div className="portfolio-card project-more-works-card"
+        <div className="portfolio-card project-more-works-card portofolio-card"
           onMouseEnter={() => {
             const cursor = document.querySelector('.portfolio-img-cursor');
             if(cursor) {
