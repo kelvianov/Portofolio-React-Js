@@ -167,6 +167,11 @@ const PortfolioSection = () => {
                 onMouseEnter={handleImgEnter}
                 onMouseMove={handleImgMove}
                 onMouseLeave={handleImgLeave}
+                style={{ cursor: 'pointer' }}
+                onClick={() => {
+                  navigate('/project3');
+                  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+                }}
               />
               <div className="portfolio-card-footer">
                 <div className="portfolio-dots">
@@ -196,6 +201,11 @@ const PortfolioSection = () => {
                 onMouseEnter={handleImgEnter}
                 onMouseMove={handleImgMove}
                 onMouseLeave={handleImgLeave}
+                style={{ cursor: 'pointer' }}
+                onClick={() => {
+                  navigate('/project2');
+                  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+                }}
               />
               <div className="portfolio-card-footer">
                 <div className="portfolio-dots">
