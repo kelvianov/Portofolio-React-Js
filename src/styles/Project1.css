@@ -1,3 +1,50 @@
+/* More Works Card Size */
+.project-more-works-card {
+  width: 420px;
+  min-width: 0;
+  max-width: 100%;
+  margin: 40px 0 0 0;
+}
+/* More Works Cards Row Layout */
+.project-more-works-cards-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+  margin: 30px 0 60px 0;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+@media (max-width: 1600px) {
+  .project-more-works-cards-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .portfolio-card {
+    width: 95vw !important;
+    max-width: 600px;
+    margin: 32px 0 0 0 !important;
+  }
+  .project-more-works-card {
+    width: 660px !important;
+    max-width: 100% !important;
+    margin: 40px 0 0 0 !important;
+  }
+}
+@media (max-width: 900px) {
+  .project-more-works-cards-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .project-more-works-card {
+    width: 95vw;
+    max-width: 480px;
+    margin: 32px 0 0 0;
+  }
+}
 /* Infinite Marquee Section */
 .infinite-marquee-wrapper {
   width: 100vw;
@@ -24,6 +71,7 @@
   text-transform: uppercase;
   position: relative;
   min-width: 400vw; /* pastikan isi marquee sangat panjang */
+  margin-bottom: -30px; /* untuk menghindari overlap dengan konten di bawahnya */
 }
 
 
@@ -43,17 +91,11 @@
   color: #fff !important;
   z-index: 2;
 }
-
 /* Fade out for leaving span (optional, for smoother effect) */
-
 .infinite-marquee span.marquee-fade {
   opacity: 0.35;
   font-weight: 700;
   transition: opacity 0.4s;
-}
-.infinite-marquee span.marquee-active {
-  opacity: 1;
-  font-weight: 900;
 }
 
 @keyframes marquee {

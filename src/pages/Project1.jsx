@@ -91,6 +91,53 @@ const Project = () => {
 
       {/* Infinite Marquee Section */}
       <InfiniteMarquee />
+
+      {/* More Works Cards Section */}
+      <div className="project-more-works-cards-row" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start', gap: '48px', margin: '60px 0 80px 0', width: '100%', flexWrap: 'nowrap' }}>
+        {/* Card 1 */}
+        <div className="portfolio-card project-more-works-card">
+          <img
+            src="/images/project3.0.png"
+            alt="Portofolio Project"
+            className="portfolio-img"
+            style={{ borderRadius: '12px' }}
+          />
+          <div className="portfolio-card-footer">
+            <div className="portfolio-dots">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className={i <= 1 ? "dot active" : "dot"} />
+              ))}
+            </div>
+            <div className="portfolio-card-footer-content">
+              <div className="portfolio-card-title">Portofolio</div>
+              <div className="portfolio-card-subtitle">LENSWORK SHOWCASE</div>
+            </div>
+            <div className="portfolio-arrow">→</div>
+          </div>
+        </div>
+
+        {/* Card 2 */}
+        <div className="portfolio-card project-more-works-card">
+          <img
+            src="/images/project2.0.png"
+            alt="KosKu Project"
+            className="portfolio-img"
+            style={{ borderRadius: '12px' }}
+          />
+          <div className="portfolio-card-footer">
+            <div className="portfolio-dots">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className={i <= 2 ? "dot active" : "dot"} />
+              ))}
+            </div>
+            <div className="portfolio-card-footer-content">
+              <div className="portfolio-card-title">KosKu</div>
+              <div className="portfolio-card-subtitle">Commercial Website</div>
+            </div>
+            <div className="portfolio-arrow">→</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
