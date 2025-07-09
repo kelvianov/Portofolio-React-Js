@@ -32,6 +32,18 @@ const PortfolioSection = () => {
   const sectionRef = useRef(null);
   const [titleVisible, setTitleVisible] = useState(false);
   const [cursor, setCursor] = useState({ show: false, x: 0, y: 0, dark: false });
+  const [fadeOut, setFadeOut] = useState(false);
+  const fadeTimeout = useRef(null);
+
+  // Global mousemove untuk update posisi cursor custom
+  useEffect(() => {
+    if (!cursor.show) return;
+    const handleMove = (e) => {
+      setCursor((prev) => ({ ...prev, x: e.clientX, y: e.clientY }));
+    };
+    window.addEventListener("mousemove", handleMove);
+    return () => window.removeEventListener("mousemove", handleMove);
+  }, [cursor.show]);
 
   useEffect(() => {
     const currentTitle = titleRef.current;
@@ -45,9 +57,9 @@ const PortfolioSection = () => {
           }
         });
       },
-      { 
+      {
         threshold: 0.5,
-        rootMargin: "0px 0px -100px 0px" // Trigger sedikit lebih awal
+        rootMargin: "0px 0px -100px 0px", // Trigger sedikit lebih awal
       }
     );
 
@@ -70,9 +82,6 @@ const PortfolioSection = () => {
     setCursor({ show: true, x: e.clientX, y: e.clientY, dark: isDark });
   };
 
-  const [fadeOut, setFadeOut] = useState(false);
-  const fadeTimeout = useRef(null);
-
   const handleImgLeave = () => {
     setCursor({ show: false, x: 0, y: 0, dark: false });
   };
@@ -83,8 +92,8 @@ const PortfolioSection = () => {
     if (fadeTimeout.current) clearTimeout(fadeTimeout.current);
     fadeTimeout.current = setTimeout(() => {
       navigate(path);
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    }, 400); // Durasi fade-out, samakan dengan CSS
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }, 600); // Durasi fade-out, samakan dengan CSS
   };
 
   useEffect(() => {
@@ -94,7 +103,7 @@ const PortfolioSection = () => {
   }, []);
 
   return (
-    <section className={`portfolio-section${fadeOut ? ' fade-out' : ''}`} ref={sectionRef}>
+    <section className={`portfolio-section${fadeOut ? " fade-out" : ""}`} ref={sectionRef}>
       {/* Custom Cursor */}
       <div
         className={`portfolio-img-cursor${cursor.show ? " active" : ""}${cursor.dark ? " dark" : ""}`}
@@ -147,25 +156,31 @@ const PortfolioSection = () => {
               <img
                 src={portfolioData[0].image}
                 alt={portfolioData[0].title}
-                className="portfolio-img" 
+                className="portfolio-img"
                 onMouseEnter={handleImgEnter}
                 onMouseMove={handleImgMove}
                 onMouseLeave={handleImgLeave}
-                style={{ cursor: 'pointer' }}
-                onClick={() => handleNavigate('/project1')}
+                style={{ cursor: "pointer" }}
+                onClick={() => handleNavigate("/project1")}
               />
               <div className="portfolio-card-footer">
                 <div className="portfolio-dots">
                   {[...Array(portfolioData[0].dots)].map((_, i) => (
                     <span
                       key={i}
-                      className={i <= portfolioData[0].activeDot ? "dot active" : "dot"}
+                      className={
+                        i <= portfolioData[0].activeDot ? "dot active" : "dot"
+                      }
                     />
                   ))}
                 </div>
                 <div className="portfolio-card-footer-content">
-                  <div className="portfolio-card-title">{portfolioData[0].title}</div>
-                  <div className="portfolio-card-subtitle">{portfolioData[0].subtitle}</div>
+                  <div className="portfolio-card-title">
+                    {portfolioData[0].title}
+                  </div>
+                  <div className="portfolio-card-subtitle">
+                    {portfolioData[0].subtitle}
+                  </div>
                 </div>
                 <div className="portfolio-arrow">→</div>
               </div>
@@ -183,21 +198,27 @@ const PortfolioSection = () => {
                 onMouseEnter={handleImgEnter}
                 onMouseMove={handleImgMove}
                 onMouseLeave={handleImgLeave}
-                style={{ cursor: 'pointer' }}
-                onClick={() => handleNavigate('/project3')}
+                style={{ cursor: "pointer" }}
+                onClick={() => handleNavigate("/project3")}
               />
               <div className="portfolio-card-footer">
                 <div className="portfolio-dots">
                   {[...Array(portfolioData[1].dots)].map((_, i) => (
                     <span
                       key={i}
-                      className={i <= portfolioData[1].activeDot ? "dot active" : "dot"}
+                      className={
+                        i <= portfolioData[1].activeDot ? "dot active" : "dot"
+                      }
                     />
                   ))}
                 </div>
                 <div className="portfolio-card-footer-content">
-                  <div className="portfolio-card-title">{portfolioData[1].title}</div>
-                  <div className="portfolio-card-subtitle">{portfolioData[1].subtitle}</div>
+                  <div className="portfolio-card-title">
+                    {portfolioData[1].title}
+                  </div>
+                  <div className="portfolio-card-subtitle">
+                    {portfolioData[1].subtitle}
+                  </div>
                 </div>
                 <div className="portfolio-arrow">→</div>
               </div>
@@ -214,21 +235,27 @@ const PortfolioSection = () => {
                 onMouseEnter={handleImgEnter}
                 onMouseMove={handleImgMove}
                 onMouseLeave={handleImgLeave}
-                style={{ cursor: 'pointer' }}
-                onClick={() => handleNavigate('/project2')}
+                style={{ cursor: "pointer" }}
+                onClick={() => handleNavigate("/project2")}
               />
               <div className="portfolio-card-footer">
                 <div className="portfolio-dots">
                   {[...Array(portfolioData[2].dots)].map((_, i) => (
                     <span
                       key={i}
-                      className={i <= portfolioData[2].activeDot ? "dot active" : "dot"}
+                      className={
+                        i <= portfolioData[2].activeDot ? "dot active" : "dot"
+                      }
                     />
                   ))}
                 </div>
                 <div className="portfolio-card-footer-content">
-                  <div className="portfolio-card-title">{portfolioData[2].title}</div>
-                  <div className="portfolio-card-subtitle">{portfolioData[2].subtitle}</div>
+                  <div className="portfolio-card-title">
+                    {portfolioData[2].title}
+                  </div>
+                  <div className="portfolio-card-subtitle">
+                    {portfolioData[2].subtitle}
+                  </div>
                 </div>
                 <div className="portfolio-arrow">→</div>
               </div>
