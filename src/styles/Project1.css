@@ -1,6 +1,6 @@
 /* More Works Card Size */
 .project-more-works-card {
-  width: 420px;
+  width: 680px;
   min-width: 0;
   max-width: 100%;
   margin: 40px 0 0 0;
@@ -16,23 +16,7 @@
   width: 100%;
   flex-wrap: nowrap;
 }
-@media (max-width: 1600px) {
-  .project-more-works-cards-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-  }
-  .portfolio-card {
-    width: 95vw !important;
-    max-width: 600px;
-    margin: 32px 0 0 0 !important;
-  }
-  .project-more-works-card {
-    width: 660px !important;
-    max-width: 100% !important;
-    margin: 40px 0 0 0 !important;
-  }
-}
+/* Hapus media query 1600px agar card tetap horizontal di desktop */
 @media (max-width: 900px) {
   .project-more-works-cards-row {
     flex-direction: column;
@@ -40,8 +24,8 @@
     gap: 32px;
   }
   .project-more-works-card {
-    width: 95vw;
-    max-width: 480px;
+    width: 99vw;
+    max-width: 680px;
     margin: 32px 0 0 0;
   }
 }
@@ -71,7 +55,7 @@
   text-transform: uppercase;
   position: relative;
   min-width: 400vw; /* pastikan isi marquee sangat panjang */
-  margin-bottom: -30px; /* untuk menghindari overlap dengan konten di bawahnya */
+  margin-bottom: 10px; /* untuk menghindari overlap dengan konten di bawahnya */
 }
 
 

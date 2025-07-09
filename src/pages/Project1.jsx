@@ -1,8 +1,10 @@
 import React from "react";
 import "../styles/Project1.css";
 
+
 import Header from "../components/Header";
 import InfiniteMarquee from "../components/InfiniteMarquee";
+import ContactSection from "../components/ContactSection";
 
 const Project = () => {
   return (
@@ -93,7 +95,7 @@ const Project = () => {
       <InfiniteMarquee />
 
       {/* More Works Cards Section */}
-      <div className="project-more-works-cards-row" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start', gap: '48px', margin: '60px 0 80px 0', width: '100%', flexWrap: 'nowrap' }}>
+      <div className="project-more-works-cards-row" style={{ marginBottom: '120px' }}>
         {/* Card 1 */}
         <div className="portfolio-card project-more-works-card">
           <img
@@ -138,6 +140,9 @@ const Project = () => {
           </div>
         </div>
       </div>
+
+      {/* Contact Section persis seperti komponen utama */}
+      <ContactSection />
     </div>
   );
 };
