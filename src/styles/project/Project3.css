@@ -1,3 +1,8 @@
 @import url('./Project1.css');
 
 /* You can override or add specific styles for Project3 below if needed */
+
+/* Card 1 (Company Profile/Portrait) */
+.project-more-works-card:first-child {
+  width: 680px;
+}
