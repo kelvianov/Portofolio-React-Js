@@ -1,3 +1,67 @@
+/* Animasi Fade In untuk Project Content dan Image */
+.project-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.project-content.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-image-block {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition-delay: 0.3s; /* Delay sedikit setelah content */
+}
+
+.project-image-block.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animasi untuk child elements dengan stagger effect */
+.project-content.fade-in .project-meta {
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.project-content.fade-in .project-title {
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.project-content.fade-in .project-desc {
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.project-content.fade-in .project-live-btn {
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+/* Keyframe untuk animasi fadeInUp */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Untuk performance yang lebih baik */
+.project-content,
+.project-image-block {
+  will-change: opacity, transform;
+}
+
+.project-content.fade-in,
+.project-image-block.fade-in {
+  will-change: auto;
+}
+
 .portfolio-img-cursor.dark {
   background: #111 !important;
   color: #fff !important;

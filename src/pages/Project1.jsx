@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Project1.css";
 
 import Header from "../components/Header";
@@ -6,6 +6,17 @@ import InfiniteMarquee from "../components/InfiniteMarquee";
 import ContactSection from "../components/ContactSection";
 
 const Project = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Trigger fade in animation setelah component mount
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 100); // Delay kecil untuk memastikan component sudah ter-render
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const handleLivePreview = () => {
     window.open("https://company-profile-react-js.vercel.app/", "_blank");
   };
@@ -13,13 +24,13 @@ const Project = () => {
   return (
     <div className="project-page">
       <Header currentPage="projects" />
-      <div className="project-content">
+      <div className={`project-content ${isLoaded ? 'fade-in' : ''}`}>
         <div className="project-meta">
           <span className="project-date">JULY 12, 2025</span>
         </div>
         <h1 className="project-title">COMPANY PROFILE</h1>
         <p className="project-desc">
-          I’m a digital designer crafting bold, minimalist experiences that elevate brands.
+          I'm a digital designer crafting bold, minimalist experiences that elevate brands.
           Clean visuals and purposeful design — built to leave a lasting impression.
         </p>
         {/* Opsi 1: Menggunakan onClick handler (recommended) */}
@@ -29,7 +40,7 @@ const Project = () => {
       </div>
 
       {/* Gambar project1.0.png di bawah project-content */}
-      <div className="project-image-block">
+      <div className={`project-image-block ${isLoaded ? 'fade-in' : ''}`}>
         <img
           src="/images/project1.0.png"
           alt="Company Profile Project"
@@ -60,7 +71,7 @@ const Project = () => {
       <div className="project-section research-section">
         <div className="research-title">RESEARCH</div>
         <div className="research-desc">
-          It’s a focused process of exploring questions, identifying problems, and discovering insights that drive real progress. Through thoughtful investigation, we validate ideas, uncover new possibilities, and shape solutions that move brands and experiences forward.
+          It's a focused process of exploring questions, identifying problems, and discovering insights that drive real progress. Through thoughtful investigation, we validate ideas, uncover new possibilities, and shape solutions that move brands and experiences forward.
         </div>
       </div>
 
@@ -69,13 +80,13 @@ const Project = () => {
         <div className="design-title">DESIGN</div>
         <div className="design-desc">
           Design is how I communicate — with clarity, emotion, and intention.
-          It’s not just about how things look, but how they feel and how they work.
+          It's not just about how things look, but how they feel and how they work.
           I craft every detail to create experiences that connect and resonate.
         </div>
       </div>
 
       {/* Gambar project1.1.png di bawah Design Section */}
-      <div className="project-image-block" style={{ marginTop: '170px' }}>
+      <div className={`project-image-block ${isLoaded ? 'fade-in' : ''}`} style={{ marginTop: '170px' }}>
         <img
           src="/images/project1.1.png"
           alt="Design Section Project"
@@ -94,7 +105,7 @@ const Project = () => {
       </div>
 
       {/* Gambar project1.2.png di bawah Development Section */}
-      <div className="project-image-block" style={{ marginTop: '120px' }}>
+      <div className={`project-image-block ${isLoaded ? 'fade-in' : ''}`} style={{ marginTop: '120px' }}>
         <img
           src="/images/project1.2.png"
           alt="Development Section Project"
