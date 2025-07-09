@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../styles/Project1.css";
+import "../styles/project/Project1.css";
 
 import Header from "../components/Header";
 import InfiniteMarquee from "../components/InfiniteMarquee";
