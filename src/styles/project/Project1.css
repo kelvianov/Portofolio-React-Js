@@ -73,6 +73,12 @@
   max-width: 100%;
   margin: 40px 0 0 0;
 }
+
+/* Card 1 (Portofolio/Landscape) */
+.project-more-works-card:first-child {
+  width: 655px;
+}
+
 /* More Works Cards Row Layout */
 .project-more-works-cards-row {
   display: flex;
