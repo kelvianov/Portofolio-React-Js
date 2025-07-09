@@ -1,3 +1,69 @@
+/* Infinite Marquee Section */
+.infinite-marquee-wrapper {
+  width: 100vw;
+  overflow: hidden;
+  background: transparent;
+  margin: 64px 0 0 0;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.infinite-marquee {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 28s linear infinite;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 6vw;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #fff;
+  opacity: 0.95;
+  text-transform: uppercase;
+  position: relative;
+  min-width: 400vw; /* pastikan isi marquee sangat panjang */
+}
+
+
+/* Marquee span fade and bold effect */
+.infinite-marquee span {
+  opacity: 0.18;
+  font-weight: 700;
+  transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1), font-weight 0.2s;
+  color: #fff;
+  will-change: opacity, font-weight;
+}
+
+/* Fade in and bold for entering span */
+.infinite-marquee span.marquee-active {
+  opacity: 1 !important;
+  font-weight: 900 !important;
+  color: #fff !important;
+  z-index: 2;
+}
+
+/* Fade out for leaving span (optional, for smoother effect) */
+
+.infinite-marquee span.marquee-fade {
+  opacity: 0.35;
+  font-weight: 700;
+  transition: opacity 0.4s;
+}
+.infinite-marquee span.marquee-active {
+  opacity: 1;
+  font-weight: 900;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 /* Development Section */
 .development-section {
   display: grid;

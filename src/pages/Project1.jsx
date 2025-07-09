@@ -1,6 +1,8 @@
 import React from "react";
 import "../styles/Project1.css";
+
 import Header from "../components/Header";
+import InfiniteMarquee from "../components/InfiniteMarquee";
 
 const Project = () => {
   return (
@@ -79,13 +81,16 @@ const Project = () => {
       </div>
 
       {/* Gambar project1.2.png di bawah Development Section */}
-      <div className="project-image-block" style={{ marginTop: '150px' }}>
+      <div className="project-image-block" style={{ marginTop: '120px' }}>
         <img
           src="/images/project1.2.png"
           alt="Development Section Project"
           className="project-main-image"
         />
       </div>
+
+      {/* Infinite Marquee Section */}
+      <InfiniteMarquee />
     </div>
   );
 };
