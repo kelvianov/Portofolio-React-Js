@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/project/Project1.css";
 
 import Header from "../components/Header";
@@ -6,6 +7,7 @@ import InfiniteMarquee from "../components/InfiniteMarquee";
 import ContactSection from "../components/ContactSection";
 
 const Project = () => {
+  const navigate = useNavigate();
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -119,7 +121,15 @@ const Project = () => {
       {/* More Works Cards Section */}
       <div className="project-more-works-cards-row" style={{ marginBottom: '120px' }}>
         {/* Card 1 */}
-        <div className="portfolio-card project-more-works-card portofolio-card"
+        <div
+          className="portfolio-card project-more-works-card portofolio-card"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(() => {
+              navigate('/project3');
+            }, 200);
+          }}
+          style={{ cursor: 'pointer' }}
           onMouseEnter={() => {
             const cursor = document.querySelector('.portfolio-img-cursor');
             if(cursor) {
@@ -163,7 +173,15 @@ const Project = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="portfolio-card project-more-works-card"
+        <div
+          className="portfolio-card project-more-works-card"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(() => {
+              navigate('/project2');
+            }, 200);
+          }}
+          style={{ cursor: 'pointer' }}
           onMouseEnter={() => {
             const cursor = document.querySelector('.portfolio-img-cursor');
             if(cursor) cursor.classList.add('active');
