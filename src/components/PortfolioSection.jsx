@@ -70,12 +70,31 @@ const PortfolioSection = () => {
     setCursor({ show: true, x: e.clientX, y: e.clientY, dark: isDark });
   };
 
+  const [fadeOut, setFadeOut] = useState(false);
+  const fadeTimeout = useRef(null);
+
   const handleImgLeave = () => {
     setCursor({ show: false, x: 0, y: 0, dark: false });
   };
 
+  // Handler untuk animasi fade-out sebelum navigasi
+  const handleNavigate = (path) => {
+    setFadeOut(true);
+    if (fadeTimeout.current) clearTimeout(fadeTimeout.current);
+    fadeTimeout.current = setTimeout(() => {
+      navigate(path);
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }, 400); // Durasi fade-out, samakan dengan CSS
+  };
+
+  useEffect(() => {
+    return () => {
+      if (fadeTimeout.current) clearTimeout(fadeTimeout.current);
+    };
+  }, []);
+
   return (
-    <section className="portfolio-section" ref={sectionRef}>
+    <section className={`portfolio-section${fadeOut ? ' fade-out' : ''}`} ref={sectionRef}>
       {/* Custom Cursor */}
       <div
         className={`portfolio-img-cursor${cursor.show ? " active" : ""}${cursor.dark ? " dark" : ""}`}
@@ -133,10 +152,7 @@ const PortfolioSection = () => {
                 onMouseMove={handleImgMove}
                 onMouseLeave={handleImgLeave}
                 style={{ cursor: 'pointer' }}
-                onClick={() => {
-                  navigate('/project1');
-                  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-                }}
+                onClick={() => handleNavigate('/project1')}
               />
               <div className="portfolio-card-footer">
                 <div className="portfolio-dots">
@@ -168,10 +184,7 @@ const PortfolioSection = () => {
                 onMouseMove={handleImgMove}
                 onMouseLeave={handleImgLeave}
                 style={{ cursor: 'pointer' }}
-                onClick={() => {
-                  navigate('/project3');
-                  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-                }}
+                onClick={() => handleNavigate('/project3')}
               />
               <div className="portfolio-card-footer">
                 <div className="portfolio-dots">
@@ -202,10 +215,7 @@ const PortfolioSection = () => {
                 onMouseMove={handleImgMove}
                 onMouseLeave={handleImgLeave}
                 style={{ cursor: 'pointer' }}
-                onClick={() => {
-                  navigate('/project2');
-                  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-                }}
+                onClick={() => handleNavigate('/project2')}
               />
               <div className="portfolio-card-footer">
                 <div className="portfolio-dots">
