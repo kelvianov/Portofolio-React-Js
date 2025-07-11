@@ -1,9 +1,12 @@
+
 import React from 'react';
 import '../styles/HeroSection.css';
+import LanyardPortal from './LanyardPortal';
+
 
 const HeroSection = () => {
   return (
-    <section className="hero-section">
+    <section className="hero-section" style={{ minHeight: 500 }}>
       <div className="hero-content hero-content-left">
         <div className="hero-subtitle">
           I’m Specialized in<br />
@@ -11,6 +14,7 @@ const HeroSection = () => {
         </div>
         <h1 className="hero-title">KELVIANOV</h1>
       </div>
+      <LanyardPortal />
     </section>
   );
 };
