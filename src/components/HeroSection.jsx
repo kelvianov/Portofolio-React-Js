@@ -1,12 +1,14 @@
 
+import Lanyard from "../components/Lanyard/Lanyard";
+
 import React from 'react';
 import '../styles/HeroSection.css';
-import LanyardPortal from './LanyardPortal';
 
 
 const HeroSection = () => {
   return (
-    <section className="hero-section" style={{ minHeight: 500 }}>
+    <section className="hero-section" style={{ minHeight: 500, position: 'relative' }}>
+      <Lanyard />
       <div className="hero-content hero-content-left">
         <div className="hero-subtitle">
           I’m Specialized in<br />
@@ -14,7 +16,6 @@ const HeroSection = () => {
         </div>
         <h1 className="hero-title">MPIW</h1>
       </div>
-      <LanyardPortal />
     </section>
   );
 };

@@ -1,15 +1,19 @@
 /*
-	Installed from https://reactbits.dev/default/
+  Installed from https://reactbits.dev/default/
 */
 
 .lanyard-wrapper {
-  position: relative;
-  z-index: 0;
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: scale(1);
-  transform-origin: center;
+  justify-content: flex-end;
+  align-items: flex-start;
+  z-index: 1000;
+}
+
+.lanyard-card-draggable {
+  pointer-events: auto;
 }
